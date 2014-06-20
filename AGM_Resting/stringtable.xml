@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="AGM">
+  <Package name="Resting">
+
+    <Key ID="STR_AGM_Resting_RestWeapon">
+      <English>Rest weapon</English>
+      <German>Waffe auflegen</German>
+      <Spanish>Apoyar el arma</Spanish>
+      <Polish>Oprzyj broń</Polish>
+      <Czech>Zapřít zbraň</Czech>
+      <French>Appuyer l'arme</French>
+      <Russian>Зафиксировать оружие</Russian>
+    </Key>
+
+    <Key ID="STR_AGM_Resting_BipodDeployed">
+      <English>Bipod deployed</English>
+      <German>Zweibein ausgeklappt</German>
+      <Spanish>Bípode desplegado</Spanish>
+      <Polish>Dwójnóg rozstawiony</Polish>
+      <Czech>Dvojnožka rozložena</Czech>
+      <French>Bipied deployé</French>
+      <Russian>Сошки установлены</Russian>
+    </Key>
+    <Key ID="STR_AGM_Resting_WeaponRested">
+      <English>Weapon rested</English>
+      <German>Waffe aufgelegt</German>
+      <Spanish>Arma apoyada</Spanish>
+      <Polish>Broń oparta</Polish>
+      <Czech>Zbraň zapřena</Czech>
+      <French>Arme appuyé</French>
+      <Russian>Оружие зафиксировано</Russian>
+    </Key>
+
+    <Key ID="STR_AGM_Resting_BipodUndeployed">
+      <English>Bipod undeployed</English>
+      <German>Zweibein eingeklappt</German>
+      <Spanish>Bípode plegado</Spanish>
+      <Polish>Dwójnóg złożony</Polish>
+      <Czech>Dvojnožka rozložena</Czech>
+      <French>Bipied retracté</French>
+      <Russian>Сошки убраны</Russian>
+    </Key>
+    <Key ID="STR_AGM_Resting_WeaponLifted">
+      <English>Weapon lifted</English>
+      <German>Waffe gehoben</German>
+      <Spanish>Arma levantada</Spanish>
+      <Polish>Broń podniesiona</Polish>
+      <Czech>Zbraň zdvyhnuta</Czech>
+      <French>Arme Non-appuyé</French>
+      <Russian>Оружие не зафиксировано</Russian>
+    </Key>
+
+  </Package>
+</Project>

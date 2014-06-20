@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="AGM">
+  <Package name="Aircraft">
+
+    <Key ID="STR_AGM_Aircraft_CMFlareLauncher_Burst_Name">
+      <English>Burst</English>
+      <German>Feuerstoß</German>
+      <Spanish>Ráfaga</Spanish>
+      <Polish>Seria</Polish>
+      <Czech>Světlice</Czech>
+      <French>Rafale</French>
+      <Russian>Очередь</Russian>
+    </Key>
+
+  </Package>
+</Project>
