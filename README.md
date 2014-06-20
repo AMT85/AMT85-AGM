@@ -34,7 +34,7 @@ For a full list, look at the wiki:
 https://github.com/KoffeinFlummi/AGM/wiki
 
 For the AMT85 version:
-https://github.com/KoffeinFlummi/AGM/wiki
+https://github.com/AMT85/AMT-85-AGM/wiki
 
 ## Contributing
 
