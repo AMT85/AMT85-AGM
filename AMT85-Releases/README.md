@@ -1,2 +1,2 @@
-Addon version
+Addon versio
 
