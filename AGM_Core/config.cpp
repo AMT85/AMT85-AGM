@@ -14,13 +14,22 @@ class CfgPatches {
 
 class CfgFunctions {
   class AGM_Core {
-    class AGM_Core {
+    class AGM_Core_init {
+      class AGM_Core {
+        file = "AGM_Core\init.sqf";
+        postInit = 1;
+      };
+    };
+    class AGM_Core_functions {
       file = "AGM_Core\functions";
       class binarizeNumber;
       class codeToString;
       class convertKeyCode;
       class createUpdateLoop;
+      class disableUserInput;
       class displayText;
+      class displayTextPicture;
+      class displayTextStructured;
       class execRemoteFnc;
       class findStringInString;
       class getBinocular;
@@ -30,6 +39,7 @@ class CfgFunctions {
       class getTargetDistance;
       class getTurretIndex;
       class getTurrets;
+      class getWeaponAzimuthAndInclination;
       class getWeaponType;
       class getWindDirection;
       class isAutoWind;
@@ -42,10 +52,10 @@ class CfgFunctions {
       class progressBar;
       class revertKeyCodeLocalized;
       class setKeyDefault;
+      class stringToColoredText;
       class subString;
       class toBin;
       class toHex;
-      class disableUserInput;
     };
   };
 };
@@ -57,11 +67,11 @@ class CfgSounds {
   };
 };
 
-class Extended_PostInit_EventHandlers {
+/*class Extended_PostInit_EventHandlers {
   class AGM_Core {
     Init = "call compile preprocessFileLineNumbers '\AGM_Core\init.sqf'";
   };
-};
+};*/
 
 class CfgFactionClasses {
   class AGM {
@@ -102,6 +112,19 @@ class CfgVehicles {
       };
     };
   };
+
+  class Box_NATO_Support_F;
+  class AGM_Box_Misc: Box_NATO_Support_F {
+    author = "AGM";
+    displayName = "$STR_AGM_Core_MiscItems";
+    transportmaxmagazines = 9001;
+    transportmaxbackbacks = 0;
+    maximumload = 2000;
+
+    class TransportWeapons {};
+    class TransportMagazines {};
+    class TransportItems {};
+  };
 };
 
 class CfgWeapons {
@@ -131,3 +154,4 @@ class CfgMagazines {
 #include <MainMenu.hpp>
 #include <MenuConfig.hpp>
 #include <ProgressScreen.hpp>
+#include <HintConfig.hpp>
