@@ -4,9 +4,9 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = 0.60;
     requiredAddons[] = {A3_UI_F};
-    version = "0.91";
-    versionStr = "0.91";
-    versionAr[] = {0,91,0};
+    version = "0.92";
+    versionStr = "0.92";
+    versionAr[] = {0,92,0};
     author[] = {"KoffeinFlummi"};
     authorUrl = "https://github.com/KoffeinFlummi/";
   };
@@ -14,13 +14,13 @@ class CfgPatches {
 
 class CfgFunctions {
   class AGM_Core {
-    class AGM_Core_init {
+    /*class AGM_Core_init {
       class AGM_Core {
         file = "AGM_Core\init.sqf";
         postInit = 1;
       };
-    };
-    class AGM_Core_functions {
+    };*/
+    class AGM_Core {//_functions {
       file = "AGM_Core\functions";
       class binarizeNumber;
       class codeToString;
@@ -45,7 +45,6 @@ class CfgFunctions {
       class isAutoWind;
       class isInBuilding;
       class isTurnedOut;
-      class keyInput;
       class moduleCheckPBOs;
       class numberToDigits;
       class numberToDigitsString;
@@ -67,11 +66,11 @@ class CfgSounds {
   };
 };
 
-/*class Extended_PostInit_EventHandlers {
+class Extended_PostInit_EventHandlers {
   class AGM_Core {
     Init = "call compile preprocessFileLineNumbers '\AGM_Core\init.sqf'";
   };
-};*/
+};
 
 class CfgFactionClasses {
   class AGM {

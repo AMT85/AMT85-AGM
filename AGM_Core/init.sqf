@@ -14,9 +14,17 @@ AGM_Core_closeMenu = compile preprocessFileLineNumbers "\AGM_core\scripts\closeM
 AGM_Core_nextKeys = compile preprocessFileLineNumbers "\AGM_core\scripts\nextKeys.sqf";
 AGM_Core_toggleState = compile preprocessFileLineNumbers "\AGM_core\scripts\toggleState.sqf";
 
-call AGM_Core_fnc_setKeyDefault;
+[false] call AGM_Core_fnc_setKeyDefault;
+
+AGM_Core_keyStates = [];
+AGM_Core_keyTimes = [];
+for "_index" from 0 to 300 do {
+	AGM_Core_keyStates set [_index, 0];
+	AGM_Core_keyTimes set [_index, -1];
+};
 
 call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initKeys.sqf";
+//call compile preprocessFileLineNumbers "\AGM_core\scripts\KeyInput\initKeyX.sqf";
 
 0 spawn {
 	while {true} do {
