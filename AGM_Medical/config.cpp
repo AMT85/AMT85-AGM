@@ -6,20 +6,7 @@ class CfgPatches {
     };
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {
-      AGM_Core,
-      AGM_Interaction,
-      Extended_EventHandlers,
-      A3_Data_F,
-      A3_Anims_F,
-      A3_Anims_F_Config_Sdr,
-      A3_Anims_F_EPA,
-      A3_Anims_F_EPC,
-      A3_CargoPoses_F,
-      A3_Characters_F,
-      A3_Weapons_F_Items,
-      A3_UI_F
-    };
+    requiredAddons[] = {AGM_Core, AGM_Interaction};
     version = "0.92";
     versionStr = "0.92";
     versionAr[] = {0,92,0};
@@ -63,6 +50,12 @@ class Extended_Init_EventHandlers {
     class AGM_Medical {
       init = "_this call AGM_Medical_fnc_init";
     };
+  };
+};
+
+class Extended_PostInit_EventHandlers {
+  class AGM_Medical {
+    clientInit = "call compile preprocessFileLineNumbers '\AGM_Medical\clientInit.sqf'";
   };
 };
 
@@ -485,7 +478,6 @@ class CfgWeapons {
   class InventoryItem_Base_F;
   class InventoryFirstAidKitItem_Base_F;
   class MedikitItem;
-  class VestItem;
 
   // ITEMS
   class FirstAidKit: ItemCore {
@@ -523,7 +515,7 @@ class CfgWeapons {
   class AGM_Epipen: AGM_Bandage {
     displayName = "$STR_AGM_Medical_Epinephrine_Name";
     descriptionShort = "$STR_AGM_Medical_Epinephrine_Description";
-    model = "\A3\Weapons_F\Items\FirstAidkit";
+    model = "\AGM_Medical\agm_epipen.p3d";
     picture = "\AGM_Medical\UI\AGM_epipen_ca.paa";
   };
   class AGM_Bloodbag: AGM_Bandage {
@@ -536,7 +528,8 @@ class CfgWeapons {
     };
   };
 
-  // VESTS
+  class VestItem;
+
   // basically we are reducing the amount of shots a vest can take from something like 5 to 2.
   class Vest_Camo_Base: ItemCore {
     class ItemInfo;
@@ -713,6 +706,7 @@ class CfgActions {
   };
 };
 
+// ANIMATIONS
 class CfgMovesBasic {
   class Actions {
     class NoActions;
@@ -738,6 +732,145 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     class AcinPknlMwlkSnonWnonDb: AmovPercMstpSnonWnonDnon_AcinPknlMwlkSnonWnonDb_1 {
       enableDirectControl = 1;
     };
+  };
+};
+
+// BLOOD MIST EFFECTS
+/*
+class CfgCloudlets {
+  class Default;
+  class Blood;
+  class BloodMist: Blood {
+    particleShape = "\A3\data_f\ParticleEffects\Universal\Universal_02";
+    particleFSNtieth = 8;
+    particleFSIndex = 4;
+    particleFSFrameCount = 1;
+    particleFSLoop = 0;
+    lifeTime = 2.0;
+    size[] = {"(hit/50 + 0.5)","2*(hit/50 + 0.5)"};
+    color[] = {{ 1,0,0,0.1 },{ 1,0,0,0.05 }};
+    randomDirectionPeriod = 0.3;
+    randomDirectionIntensity = 0.3;
+    weight = 0.127;
+  };
+  class Blood2: Default {
+    lifeTime = 120;
+    weight = 20.0;
+    size[] = {2.0};
+    destroyOnWaterSurface = 0;
+  };
+  class Blood3: Default {
+    lifeTime = 60;
+    weight = 2.0;
+    size[] = {0.75};
+    destroyOnWaterSurface = 0;
+  };
+  class Blood4: Blood3 {
+    lifeTime = 60;
+    weight = 2.0;
+    size[] = {0.05};
+    destroyOnWaterSurface = 0;
+  };
+  class Blood5: Blood4 {
+    lifeTime = 60;
+    weight = 2.0;
+    size[] = {0.125};
+    destroyOnWaterSurface = 0;
+  };
+};
+
+class ImpactEffectsBlood {
+  class BloodMist {
+    simulation = "particles";
+    type = "BloodMist";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 1;
+    MoveVelocityVar[] = {0,0,0};
+  };
+  class Blood {
+    simulation = "particles";
+    type = "Blood";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 0.2;
+    MoveVelocityVar[] = {2,2,2};
+  };
+  class Blood1 {
+    simulation = "particles";
+    type = "Blood1";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 0.65;
+  };
+  class Blood2 {
+    simulation = "particles";
+    type = "Blood2";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 0.4;
+  };
+  class Blood3 {
+    simulation = "particles";
+    type = "Blood3";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 0.4;
+  };
+  class Blood4 {
+    simulation = "particles";
+    type = "Blood4";
+    position[] = {0,0,0};
+    intensity = 0.5;
+    interval = 1;
+    lifeTime = 0.65;
+  };
+  class Blood5 {
+    simulation = "particles";
+    type = "Blood5";
+    position[] = {0,0,0};
+    intensity = 0.5;
+    interval = 1;
+    lifeTime = 0.4;
+  };
+  class BloodUnderwater1 {
+    simulation = "particles";
+    type = "BloodUnderwater1";
+    position[] = {0,0,0};
+    intensity = 1;
+    interval = 1;
+    lifeTime = 0.4;
+  };
+};
+*/
+
+class CfgCloudlets {
+  class Blood;
+  class AGM_BloodMist: Blood {
+    particleShape = "\A3\data_f\ParticleEffects\Universal\Universal_02";
+    particleFSNtieth = 8;
+    particleFSIndex = 4;
+    lifeTime = 2.3;
+    size[] = {"((hit + 5) max 30) / 30", "((hit + 5) max 30) / 60", "((hit + 5) max 30) / 120"};
+    color[] = {{1,0.1,0.1,0.14}, {1,0.1,0.1,0.07}, {1,0.1,0.1,0.035}};
+    randomDirectionPeriod = 0.5;
+    randomDirectionIntensity = 0.5;
+  };
+};
+
+class ImpactEffectsBlood {
+  class AGM_BloodMist {
+    intensity = 1;
+    interval = 1;
+    lifeTime = 1;
+    position[] = {0,0,0};
+    simulation = "particles";
+    type = "AGM_BloodMist";
   };
 };
 

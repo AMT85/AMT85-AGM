@@ -2,8 +2,6 @@
 #define StrenghToDeafness 3
 #define MaxDeafness 1.1
 
-if (isDedicated) exitWith {};
-
 AGM_EarRingingPlaying = false;
 
 AGM_EarPlugsIn = false;
@@ -66,6 +64,13 @@ AGM_NewStrength = 0;
     if (player getVariable ["X39_MedSys_var_hasEarplugs", false] or AGM_EarPlugsin) then {
       if (_volume > 0.8) then {
         _volume = 0.8;
+      };
+    };
+
+    // Reduce volume if player is unconscious
+    if (player getVariable ["AGM_Unconscious", false]) then {
+      if (_volume > 0.4) then {
+        _volume = 0.4;
       };
     };
 

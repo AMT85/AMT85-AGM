@@ -1,9 +1,9 @@
 class CfgPatches {
-  class BWA3_Misc {
+  class AGM_Misc {
     units[] = {};
     weapons[] = {};
     requiredVersion = 0.60;
-    requiredAddons[] = {A3_Weapons_F, A3_Anims_F};
+    requiredAddons[] = {AGM_Core};
     version = "0.92";
     versionStr = "0.92";
     versionAr[] = {0,92,0};

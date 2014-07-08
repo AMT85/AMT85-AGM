@@ -7,48 +7,64 @@
       <German>XM312</German>
       <Spanish>XM312</Spanish>
       <French>XM312</French>
+      <Czech>XM312</Czech>
+      <Polsih>XM312</Polsih>
     </Key>
     <Key ID="STR_AGM_VehicleNames_HMG_01_A_Name">
       <English>XM312A</English>
       <German>XM312A</German>
       <Spanish>XM312</Spanish>
       <French>XM312A</French>
+      <Czech>XM312A</Czech>
+      <Polish>XM312A</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_HMG_01_high_Name">
       <English>XM312 (High)</English>
       <German>XM312 (Hoch)</German>
       <Spanish>XM312 (Alto)</Spanish>
       <French>XM312 (Haut)</French>
+      <Czech>XM312 (Vysoký)</Czech>
+      <Polish>XM312 (Wysoki)</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_GMG_01_Name">
       <English>XM307</English>
       <German>XM307</German>
       <Spanish>XM307</Spanish>
       <French>XM307</French>
+      <Czech>XM307</Czech>
+      <Polish>XM307</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_GMG_01_A_Name">
       <English>XM307A</English>
       <German>XM307A</German>
       <Spanish>XM307A</Spanish>
       <French>XM307A</French>
+      <Czech>XM307A</Czech>
+      <Polish>XM307A</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_GMG_01_high_Name">
       <English>XM307 (High)</English>
       <German>XM307 (Hoch)</German>
       <Spanish>XM307 (Alto)</Spanish>
       <French>XM307 (Haut)</French>
+      <Czech>XM307 (Vysoký)</Czech>
+      <Polish>XM307 (Wysoki)</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_static_AT_Name">
       <English>Mini-Spike Launcher (AT)</English>
       <German>Mini-Spike Lenkflugkörper (AT)</German>
       <Spanish>Lanzador Mini-Spike (AT)</Spanish>
       <French>Mini-Spike Lanceur (AT)</French>
+      <Czech>Mini-Spike Odpalovač (AT)</Czech>
+      <Polish>Wyrzutnia Mini-Spike (AT)</Polish>
     </Key>
     <Key ID="STR_AGM_VehicleNames_static_AA_Name">
       <English>Mini-Spike Launcher (AA)</English>
       <German>Mini-Spike Lenkflugkörper (AA)</German>
       <Spanish>Lanzador Mini-Spike (AA)</Spanish>
       <French>Mini-Spike Lanceur (AA)</French>
+      <Czech>Mini-Spike Odpalovač (AA)</Czech>
+      <Polish>Wyrzutnia Mini-Spike (AA)</Polish>
     </Key>
 
     <Key ID="STR_AGM_VehicleNames_MRAP_01_Name">
