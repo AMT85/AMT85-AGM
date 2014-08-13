@@ -26,11 +26,17 @@ No gimmicky features that don't add anything to gameplay and are out of place in
 ## Features
 
 *   Improved medical system
+*   Logistics system including cargo transport and vehicle maintenance
+*   Explosives system including different trigger types
+*   Captivity system
 *   Realistic names for vehicles and weapons
 *   Realistic ballistics including wind and humidity
 *   Backblast simulation
-*   Weapon resting  
-and more!
+*   Weapon resting
+*   A fire control system for armored vehicles and helicopters  
+and more...
+
+*   include AMT85 revive
 
 For a full list, look at the wiki:
 https://github.com/KoffeinFlummi/AGM/wiki
