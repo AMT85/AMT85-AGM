@@ -1,6 +1,8 @@
 Authentic Gameplay Mod
 ======================
 
+* New modification for AMT85 by Dimitry
+
 A modular authenticism/realism mod for Arma 3, partly based on Taosenai's work.
 Edited the org. sources from KoffeinFlummi for the AMT85 Community
 
